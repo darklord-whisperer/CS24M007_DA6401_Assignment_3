@@ -1,4 +1,4 @@
-# CS6910_Assignment3
+# DA6401_Assignment3
 
 Visualizing a particular input characters (Native word's character) weightage on each of the predicted Latin word's characters.[Example](https://distill.pub/2019/memorization-in-rnns/#appendix-autocomplete)
 
