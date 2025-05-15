@@ -1,4 +1,4 @@
-# CS6910_Assignment3
+# DA6401_Assignment3
 
 In this question we are going to use the pretrained transformer model GPT2 and finetune it on lyrics dataset and generate the lyrics with prefix "I love deep learning".
 
