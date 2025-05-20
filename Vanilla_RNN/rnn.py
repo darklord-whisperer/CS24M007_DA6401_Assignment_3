@@ -2,7 +2,7 @@ from tensorflow import keras
 from keras.layers import SimpleRNN,LSTM,GRU,Embedding,Dense,Dropout,Input
 from tensorflow.keras.optimizers import Adam,Nadam
 import wandb
-from wandb.keras import WandbCallback
+from wandb.integration.keras import WandbCallback
 import numpy as np
 import pandas as pd
 
@@ -89,7 +89,7 @@ class Model(object):
         validation_data = ([encoder_val_english, decoder_val_english], decoder_val_indic),
         batch_size = self.batch_size,
         epochs = self.num_epochs,
-        callbacks = [WandbCallback()]
+        callbacks=[WandbCallback(save_graph=False, save_model=False)]
         )  
 
     def get_layer_index(self):
