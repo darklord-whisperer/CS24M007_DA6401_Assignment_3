@@ -75,5 +75,4 @@ dic_prd = {'English':eng, 'true_indic':true, 'pred_indic':pred}
 df = pd.DataFrame(dic_prd) 
     
 # saving the dataframe 
-df.to_csv('Predictions_Attention.csv') 
-
+df.to_csv('Predictions_Attention.csv')
