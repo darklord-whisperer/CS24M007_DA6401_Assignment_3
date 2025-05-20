@@ -181,7 +181,3 @@ def preprocess(train_path, dev_path, test_path, batch_size):
 
     return (encoder_train_english, decoder_train_english, decoder_train_indic), (encoder_val_english, decoder_val_english, decoder_val_indic), (val_english, val_indic), (encoder_test_english, decoder_test_english, decoder_test_indic), (english_char_set, indic_char_set, max_seq_len_english_encoder, max_seq_len_indic_decoder), (indic_char_to_idx, indic_idx_to_char), (english_char_to_idx, english_idx_to_char)
     
-
-#Reference : Keras Documentation.
-#https://keras.io/examples/nlp/lstm_seq2seq/
-#https://stackoverflow.com/questions/54176051/invalidargumenterror-indicesi-0-x-is-not-in-0-x-in-keras
