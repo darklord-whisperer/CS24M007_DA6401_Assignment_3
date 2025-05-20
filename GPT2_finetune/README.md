@@ -1,11 +1,13 @@
-# DA6401_Assignment3
+# GPT2 Finetuning
 
-In this question we are going to use the pretrained transformer model GPT2 and finetune it on lyrics dataset and generate the lyrics with prefix "I love deep learning".
+## Description
 
-### GPT-2
-GPT-2 is a transformers model pretrained on a very large corpus of English data in a self-supervised fashion. This means it was pretrained on the raw texts only, with no humans labelling them in any way (which is why it can use lots of publicly available data) with an automatic process to generate inputs and labels from those texts. More precisely, it was trained to guess the next word in sentences.
+In this notebook, we fine-tune the GPT-2 language model on a dataset of song lyrics. GPT-2 is a transformer-based autoregressive language model developed by OpenAI that generates coherent text given a prompt. The goal is to train GPT-2 to generate lyrics that continue from the prefix "I love deep learning."
 
-### Steps run the code:
-- Open the *.ipynb file in any notebook (let say jupyter notebook or in google colab).
-- Run all the cells of the notebook.
-- The Last two cells are just for saving the finetuned model and can be ignored. Note that it can take long time to save the model as the model is around few GB.
+## Running the Notebook
+
+1. **Environment Setup:** Ensure you have Python (e.g., 3.6+) and install necessary libraries. You will need PyTorch and the Hugging Face Transformers library. For example: `pip install torch transformers`  
+2. **Open the Notebook:** Navigate to the `GPT2_finetune` folder and open the `GPT2_finetune.ipynb` notebook in Jupyter or Colab.  
+3. **Execute Cells:** Run all cells in sequence. The notebook will load the lyrics dataset, fine-tune the GPT-2 model, and generate lyrics based on the given prefix.  
+4. **View Output:** After training, the notebook will output generated lyrics in the cell outputs. You can adjust hyperparameters (such as number of epochs or learning rate) and re-run cells to experiment with different results.  
+5. **Saving the Model (Optional):** The last two cells of the notebook save the fine-tuned model and tokenizer to disk. These steps are optional; you can skip them if you do not need to save the model locally.  
