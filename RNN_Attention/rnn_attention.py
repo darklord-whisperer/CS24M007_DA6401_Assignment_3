@@ -4,7 +4,7 @@ from tensorflow.keras.optimizers import Adam,Nadam
 import wandb
 import tensorflow as tf
 from tensorflow.keras.layers import Concatenate, AdditiveAttention
-from wandb.keras import WandbCallback
+from wandb.integration.keras import WandbCallback
 import numpy as np
 import pandas as pd
 
@@ -107,7 +107,7 @@ class Model(object):
         validation_data = ([encoder_val_english, decoder_val_english], decoder_val_indic),
         batch_size = self.batch_size,
         epochs = self.num_epochs,
-        callbacks = [WandbCallback()]
+        callbacks=[WandbCallback(save_graph=False, save_model=False)]
         )  
 
     def inference_setup(self):
@@ -217,6 +217,3 @@ class Model(object):
             attention_weights.append(output_tokens[-1][0][0])
             
         return decoded_sentence, attention_weights
-
-
-
