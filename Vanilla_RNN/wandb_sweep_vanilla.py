@@ -12,9 +12,9 @@ def train_wandb(config = None):
     name = f'cell_{cfg.cell}_hidden_{cfg.num_hidden_layers}_encl_{cfg.num_enc_layers}_decl_{cfg.num_dec_layers}_emb_{cfg.embedding_size}_opt_{cfg.optimizer}_drop_{cfg.dropout}'
     
 
-    train_path = "hi.translit.sampled.train.tsv"
-    dev_path = "hi.translit.sampled.dev.tsv"
-    test_path = "hi.translit.sampled.test.tsv"
+    train_path = "/content/drive/MyDrive/dakshina_dataset_v1.0/dakshina_dataset_v1.0/hi/lexicons/hi.translit.sampled.train.tsv"
+    dev_path = "/content/drive/MyDrive/dakshina_dataset_v1.0/dakshina_dataset_v1.0/hi/lexicons/hi.translit.sampled.dev.tsv"
+    test_path = "/content/drive/MyDrive/dakshina_dataset_v1.0/dakshina_dataset_v1.0/hi/lexicons/hi.translit.sampled.test.tsv"
     wandb.run.name = name
     wandb.run.save()
 
@@ -86,8 +86,8 @@ sweep_config = {
     }
 }
 
-project_name = '' #Add project name here
-entity = '' #Add username here
+project_name = "Alik_CS24M007_DA6401_DeepLearning_Assignment-3" #Add project name here
+entity = "cs24m007-iit-madras" #Add username here
 
 wandb.init(project=project_name, entity=entity)
 
